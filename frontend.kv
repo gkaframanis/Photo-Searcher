@@ -1,0 +1,26 @@
+<FirstScreen>:
+    GridLayout:
+        cols: 1
+        # padding to have some space from the edges of the screen.
+        padding: 10
+        # spacing to have space between the widgets vertically.
+        spacing: 10
+        # Image, TextInput and Button are widgets.
+        Image:
+            id: img
+            # The percentage that each widget covers in the screen
+            size_hint_y: 0.8
+        TextInput:
+            id: user_query
+            size_hint_y: 0.1
+        Button:
+            text: "Search Image"
+            size_hint_y: 0.1
+            # What happens when we press the button widget. root, a special variable points to the instance of the FirstScreen class.
+            on_press: root.set_image()
+
+
+<RootWidget>:
+    FirstScreen:
+        id: first_screen
+        name: "first_screen"
